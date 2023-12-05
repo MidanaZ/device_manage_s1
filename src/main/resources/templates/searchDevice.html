@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0125)file:///E:/html/Galio-Mega-Shop-Responsive-Bootstrap-Template/Galio-Mega-Shop-Responsive-Bootstrap-Template/ManageDevice.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+
+    <!-- Site title -->
+    <title></title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font-Awesome CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- helper class css -->
+    <link href="/css/helper.min.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link href="/css/plugins.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/skin-default.css" rel="stylesheet" id="galio-skin">
+</head>
+
+<body>
+
+<!-- color switcher start -->
+
+<!-- color switcher end -->
+
+<div class="wrapper box-layout">
+
+    <!-- header area start -->
+    <header>
+
+        <!-- header top start -->
+
+        <!-- header top end -->
+
+        <!-- header middle start -->
+        <div class="header-middle-area header-middle-style-2 pt-20 pb-20 pb-md-0 pb-sm-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="brand-logo" style="display: inline-block">
+                            <a href="/index"><img src="/images/Logo.png" height="90" width="166" style="display: inline-block"></a>
+                            <div style="font-size: 25px">Quản lí thiết bị</div>
+                        </div>
+                    </div> <!-- end logo area -->
+                    <div class="col-lg-9">
+                        <div class="header-middle-right">
+                            <form action="/index/search" method="POST">
+                                <div class="header-middle-block mb-md-20">
+                                    <div class="header-middle-searchbox">
+                                        <input type="search" name="deviceName" placeholder="Tìm kiếm...">
+                                        <button class="search-btn"><img class="image-32" src="/images/search.png">
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header middle end -->
+
+        <!-- main menu area start -->
+
+        <!-- main menu area end -->
+
+    </header>
+    <!-- header area end -->
+
+    <!-- hero slider start -->
+
+    <!-- hero slider end -->
+
+    <!-- page wrapper start -->
+    <div class="page-wrapper pt-20">
+        <div class="container">
+            <div class="row">
+                <!-- sidebar start -->
+                <div class="col-lg-3 order-2 order-lg-1">
+                    <!-- category menu start -->
+                    <div class="home-single-sidebar hm-4-cat mb-30 mb-sm-34">
+                        <div class="main-header-inner">
+                            <div class="category-toggle-wrap max-100">
+                                <div class="category-toggle">
+                                    Nơi lưu trữ
+                                    <div class="cat-icon">
+                                        <img class="image-32" src="/images/chevron-down.png">
+                                    </div>
+                                </div>
+                                <nav class="category-menu static hm-1">
+                                    <ul th:each="loc :${location}">
+                                        <li><a th:utext="${loc.locationName}"></a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- category menu end -->
+                    <div class="home-single-sidebar hm-4-cat mb-30 mb-sm-34">
+                        <div class="main-header-inner">
+                            <div class="category-toggle-wrap max-100">
+                                <div class="category-toggle">
+                                    Danh sách thiết bị
+                                    <div class="cat-icon">
+                                        <img class="image-32" src="/images/chevron-down.png">
+                                    </div>
+                                </div>
+                                <nav class="category-menu static hm-1">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/device/list}"> Danh sách thiết bị</a>
+                                            <a th:href="@{/group/list}">Danh sách nhóm thiết bị</a>
+                                            <a th:href="@{/location/list}"> Danh sách nơi lưu trữ</a>
+                                            <a th:href="@{/condition/list}">Danh sách tình trạng thiết bị</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar banner start -->
+                    <div class="home-single-sidebar hm-4-cat mb-30 mb-sm-34">
+                        <div class="main-header-inner">
+                            <div class="category-toggle-wrap max-100">
+                                <div class="category-toggle">
+                                    Danh sách các phiếu
+                                    <div class="cat-icon">
+                                        <img class="image-32" src="/images/chevron-down.png">
+                                    </div>
+                                </div>
+                                <nav class="category-menu static hm-1">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/borrowSlip/list}"> Danh sách phiếu mượn</a>
+                                            <a th:href="@{/repairSlip/list}"> Danh sách phiếu sửa chữa</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar banner end -->
+
+                    <!-- best seller area start -->
+
+                    <!-- best seller area end -->
+
+                    <!-- testimonial area start -->
+
+                    <!-- testimonial area end -->
+
+                </div>
+                <!-- sidebar end -->
+                <!-- main wrapper start -->
+                <div class="col-lg-9 order-1 order-lg-2">
+                    <!-- category tab area start -->
+                    <div class="category-tab-area mb-30 mt-md-16 mt-sm-16">
+                        <div class="category-tab">
+                            <ul class="nav">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="container">
+                            <div class="featured-carousel-active2 row arrow-space slick-arrow-style slick-initialized slick-slider"
+                                 data-row="2">
+                                <div class="slick-list draggable">
+                                    <div class="slick-track"
+                                         style="opacity: 1; width: 3052px; transform: translate3d(-872px, 0px, 0px);">
+                                        <div class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true"
+                                             tabindex="-1" style="width: 218px;">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div >
+                                    <!--                                    <th:block >-->
+                                    <div class="slick-slide slick-active devices" data-slick-index="3"
+                                         aria-hidden="false"
+                                         tabindex="0" style="width: 218px;"
+                                         >
+                                        <div class="col" style="width: 100%; display: inline-block;">
+
+                                            <!--                                            <th:block th:each="dev : ${loc.devices}">-->
+                                            <!--                                                <span th:text="${dev.deviceName}"> </span>-->
+                                            <!--                                            </th:block>-->
+                                            <div class="product-item fix mb-30 " th:each="device : ${searchResult}">
+                                                <div class="product-thumb">
+                                                    <a th:href="@{/device/{id}(id=${device.id})}" tabindex="0">
+                                                        <img class="image-device" th:src="'/images/imageDevice/'+${device.image}"  alt="">
+
+                                                    </a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 th:utext="${device.deviceName}"></h4>
+                                                    <div class="pricebox">
+                                                        <span class="regular-price"
+                                                              th:text="${device.deviceGroup.groupName}"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--                                    </th:block>-->
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1"
+                                 style="width: 218px;">
+                                <div>
+                                    <div class="col" style="width: 100%; display: inline-block;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- category tab area start -->
+
+<!-- banner statistics start -->
+
+<!-- banner statistics end -->
+
+<!-- featured category area start -->
+
+<!-- featured category area end -->
+
+</div>
+<!-- main wrapper end -->
+
+
+<!-- Scroll to top start -->
+<div class="scroll-top not-visible">
+    <i class="fa fa-angle-up"></i>
+</div>
+<!-- Scroll to Top End -->
+
+<!--<script>-->
+<!--    function openLocation(location) {-->
+<!--        var i;-->
+<!--        var x = document.getElementsByClassName("devices")-->
+<!--        for (i = 0; i < x.length; i++) {-->
+<!--            x[i].style.display = "none";-->
+
+<!--        }-->
+
+
+<!--        // for (var l =0; l < 11; l++){-->
+<!--        //     var y = document.getElementById(location + l);-->
+<!--        //     y.style.display="block";-->
+<!--        // }-->
+
+<!--        // document.getElementsById(location.toString()).style.display = "block";-->
+<!--        document.getElementById(location).style.display = "block";-->
+
+
+<!--    }-->
+<!--</script>-->
+<!--All jQuery, Third Party Plugins & Activation (main.js) Files-->
+<script src="/css/modernizr-3.6.0.min.js.download"></script>
+<!-- Jquery Min Js -->
+<script src="/css/jquery-3.3.1.min.js.download"></script>
+<!-- Popper Min Js -->
+<script src="/css/popper.min.js.download"></script>
+<!-- Bootstrap Min Js -->
+<script src="/css/bootstrap.min.js.download"></script>
+<!-- Plugins Js-->
+<script src="/css/plugins.js.download"></script>
+<!-- Ajax Mail Js -->
+<script src="/css/ajax-mail.js.download"></script>
+<!-- Active Js -->
+<script src="/css/main.js.download"></script>
+<!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
+<script src="/css/switcher.js.download"></script>
+
+
+</body>
+</html>

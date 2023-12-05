@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0125)file:///E:/html/Galio-Mega-Shop-Responsive-Bootstrap-Template/Galio-Mega-Shop-Responsive-Bootstrap-Template/ManageDevice.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+
+    <!-- Site title -->
+    <title></title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font-Awesome CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- helper class css -->
+    <link href="/css/helper.min.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link href="/css/plugins.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/skin-default.css" rel="stylesheet" id="galio-skin">
+    <!-- Fontfaces CSS-->
+    <link href="/css/font-face.css" rel="stylesheet" media="all">
+    <link href="/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!--    &lt;!&ndash; Bootstrap CSS&ndash;&gt;-->
+    <!--    <link href="/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">-->
+
+    <!--    &lt;!&ndash; Vendor CSS&ndash;&gt;-->
+    <!--    &lt;!&ndash;    <link href="/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">&ndash;&gt;-->
+    <!--    <link href="/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">-->
+    <!--    <link href="/vendor/wow/animate.css" rel="stylesheet" media="all">-->
+    <!--    <link href="/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">-->
+    <!--    <link href="/vendor/slick/slick.css" rel="stylesheet" media="all">-->
+    <!--    <link href="/vendor/select2/select2.min.css" rel="stylesheet" media="all">-->
+    <!--    <link href="/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">-->
+</head>
+
+<body>
+
+<!-- color switcher start -->
+
+<!-- color switcher end -->
+
+<div class="wrapper box-layout">
+
+    <!-- header area start -->
+    <header>
+        <!-- header middle start -->
+        <div class="header-middle-area header-middle-style-2 pt-20 pb-20 pb-md-0 pb-sm-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="brand-logo" style="display: inline-block">
+                            <a href="/index"><img class="img-full" src="/images/Logo.png" height="90" width="166"
+                                                  style="display: inline-block"></a>
+                            <div style="font-size: 25px">Quản Lý Thiết Bị</div>
+                        </div>
+                    </div> <!-- end logo area -->
+                    <div class="col-lg-9">
+                        <div class="header-middle-right">
+                            <form action="/device/search" method="POST">
+                                <div class="header-middle-block mb-md-20">
+                                    <div class="header-middle-searchbox">
+                                        <input type="search" name="deviceName" placeholder="Tìm kiếm...">
+                                        <button class="search-btn"><img class="image-32" src="/images/search.png">
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header middle end -->
+    </header>
+    <!-- header area end -->
+
+    <!-- hero slider start -->
+
+    <!-- hero slider end -->
+
+    <!-- page wrapper start -->
+    <div class="page-wrapper pt-20">
+        <div class="container">
+            <div class="row">
+                <!-- sidebar start -->
+                <div class="col-lg-3 order-2 order-lg-1">
+                    <!-- category menu start -->
+                    <div class="home-single-sidebar hm-4-cat mb-30 mb-sm-34">
+                        <div class="main-header-inner">
+                            <div class="category-toggle-wrap max-100">
+                                <div class="category-toggle">
+                                    Nơi lưu trữ
+                                    <div class="cat-icon">
+                                        <img class="image-32" src="/images/chevron-down.png">
+                                    </div>
+                                </div>
+                                <nav class="category-menu static hm-1">
+                                    <ul th:each="loc :${location}">
+                                        <li><a th:utext="${loc.locationName}"></a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- category menu end -->
+                    <div class="home-single-sidebar hm-4-cat mb-30 mb-sm-34">
+                        <div class="main-header-inner">
+                            <div class="category-toggle-wrap max-100">
+                                <div class="category-toggle">
+                                    Danh sách thiết bị
+                                    <div class="cat-icon">
+                                        <img class="image-32" src="/images/chevron-down.png">
+                                    </div>
+                                </div>
+                                <nav class="category-menu static hm-1">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/device/list}"> Danh sách thiết bị</a>
+                                            <a th:href="@{/group/list}"> Danh sách nhóm thiết bị</a>
+                                            <a th:href="@{/location/list}"> Danh sách nơi lưu trữ</a>
+                                            <a th:href="@{/condition/list}"> Danh sách tình trạng thiết bị</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar banner start -->
+                    <div class="home-single-sidebar hm-4-cat mb-30 mb-sm-34">
+                        <div class="main-header-inner">
+                            <div class="category-toggle-wrap max-100">
+                                <div class="category-toggle">
+                                    Danh sách các phiếu
+                                    <div class="cat-icon">
+                                        <img class="image-32" src="/images/chevron-down.png">
+                                    </div>
+                                </div>
+                                <nav class="category-menu static hm-1">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/borrowSlip/list}"> Danh sách phiếu mượn</a>
+                                            <a th:href="@{/repairSlip/list}"> Danh sách phiếu sửa chữa</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar banner end -->
+
+                    <!-- best seller area start -->
+
+                    <!-- best seller area end -->
+
+                    <!-- testimonial area start -->
+
+                    <!-- testimonial area end -->
+
+                </div>
+                <!-- sidebar end -->
+                <!-- main wrapper start -->
+                <div class="col-lg-9 order-1 order-lg-2">
+                    <section class="p-t-20">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 class="title-5 m-b-35">Danh sách thiết bị</h3>
+                                    <div class="table-data__tool">
+                                        <div class="table-data__tool-right">
+
+
+                                            <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                                <a href="/device/add">
+                                                    <button class="button-70" role="button">Thêm thiết bị</button>
+                                                </a>
+                                                <div class="dropDownSelect2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive table-responsive-data2" style="width: 1100px">
+                                        <table class="table table-data2">
+                                            <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th style="width: 104px">Ngày mua</th>
+                                                <th style="width: 124px">Ngày hết bảo hành</th>
+                                                <th>Id thiết bị</th>
+                                                <th style="width: 124px">Tên thiết bị</th>
+                                                <th style="width: 124px">Ảnh thiết bị</th>
+                                                <th style="width: 124px">Ảnh hóa đơn</th>
+                                                <th style="width: 104px">Tình trạng</th>
+                                                <th>Nhóm thiết bị</th>
+                                                <th style="width: 104px">Nơi lưu trữ</th>
+                                                <th>Số lượng</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr class="tr-shadow" th:each="device : ${searchResult}">
+                                                <td th:utext="${device.id}"></td>
+                                                <td th:utext="${device.datePurchase}"></td>
+                                                <td th:utext="${device.dateExpiry}"></td>
+                                                <td th:utext="${device.deviceGroup.groupName}+'-'+${device.deviceId}"></td>
+                                                <td th:utext="${device.deviceName}"></td>
+                                                <td><img class="img-64" th:src="'/images/imageDevice/'+${device.image}">
+                                                </td>
+                                                <td><img class="img-64"
+                                                         th:src="'/images/imageBill/'+${device.imageBill}"></td>
+                                                <td th:utext="${device.deviceCondition.status}"></td>
+                                                <td th:utext="${device.deviceGroup.groupName}"></td>
+                                                <td th:utext="${device.location.locationName}"></td>
+                                                <td th:utext="${device.quantity}"></td>
+                                                <td style="width: 50px">
+                                                    <div class="table-data-feature">
+
+                                                        <a th:href="@{/device/{id}(id=${device.id})}"><img
+                                                                src="/images/icons8-eye-32.png" data-toggle="tooltip"
+                                                                data-placement="top" title="Chi tiết"/></a>
+
+                                                        <a th:href="@{/device/update/{id}(id=${device.id})}"><img
+                                                                src="/images/icons8-edit-30.png" data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="Chỉnh sửa"/></a>
+
+                                                        <a th:href="@{/device/delete/{id}(id=${device.id})}"
+                                                           onclick="validate()"><img src="/images/icons8-delete-24.png"
+                                                                                     data-toggle="tooltip"
+                                                                                     data-placement="top"
+                                                                                     title="Xóa"/></a>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- category tab area start -->
+
+<!-- banner statistics start -->
+
+<!-- banner statistics end -->
+
+<!-- featured category area start -->
+
+<!-- featured category area end -->
+
+</div>
+<!-- main wrapper end -->
+
+
+<!-- Scroll to top start -->
+<!--<div class="scroll-top not-visible">-->
+<!--    <img class="image-32" src="/images/chevron-down.png">-->
+<!--</div>-->
+<!-- Scroll to Top End -->
+
+<script>
+    function validate(){
+        if( confirm("Bạn có thật sự muốn xóa ? ") === true){
+            return true;
+        } else {
+            event.preventDefault();
+        }
+
+    }
+
+
+</script>
+<!--All jQuery, Third Party Plugins & Activation (main.js) Files-->
+<script src="/js/indexjs/vendor/modernizr-3.6.0.min.js"></script>
+<!-- Jquery Min Js -->
+<script src="/js/indexjs/vendor/jquery-3.3.1.min.js"></script>
+<!-- Popper Min Js -->
+<script src="/js/indexjs/vendor/popper.min.js"></script>
+<!-- Bootstrap Min Js -->
+<script src="/js/indexjs/vendor/bootstrap.min.js"></script>
+<!-- Plugins Js-->
+<script src="/js/indexjs/plugins.js"></script>
+<!-- Ajax Mail Js -->
+<script src="/js/indexjs/ajax-mail.js"></script>
+<!-- Active Js -->
+<script src="/js/indexjs/main.js"></script>
+<!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
+<script src="/js/indexjs/switcher.js"></script>
+
+
+</body>
+</html>
