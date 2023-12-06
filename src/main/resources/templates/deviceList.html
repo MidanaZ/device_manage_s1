@@ -221,7 +221,7 @@
                                                 <td><img class="img-64" th:src="'/images/imageDevice/'+${device.image}">
                                                 </td>
                                                 <td><img class="img-64"
-                                                         th:src="'/images/imageBill/'+${device.imageBill}"></td>
+                                                         th:src="${device.imageBill}"></td>
                                                 <td th:utext="${device.deviceCondition.status}"></td>
                                                 <td th:utext="${device.deviceGroup.groupName}"></td>
                                                 <td th:utext="${device.location.locationName}"></td>

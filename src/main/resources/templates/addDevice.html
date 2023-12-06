@@ -61,7 +61,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3">
                         <div class="brand-logo" style="display: inline-block">
-                            <a href="/index"><img class="img-full" height="90" src="/images/Logo.png" style="display: inline-block"
+                            <a href="/index"><img class="img-full" height="90" src="/images/Logo.png"
+                                                  style="display: inline-block"
                                                   width="166"></a>
                             <div style="font-size: 25px">Quản Lý Thiết Bị</div>
                         </div>
@@ -183,7 +184,7 @@
                               name='form'
                               onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
                               th:action="@{add}" th:each="device:${device}"><input name="zf_referrer_name" type="hidden"
-                                                                             value="">
+                                                                                   value="">
                             <!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
                             <input name="zf_redirect_url" type="hidden" value="">
                             <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
@@ -233,7 +234,8 @@
                                             <em class="zf-important">*</em>
                                         </label>
                                             <div class="zf-tempContDiv">
-                            <span> <input id="datePurchase" maxlength="25" placeholder="" required th:field="${device.datePurchase}"
+                            <span> <input id="datePurchase" maxlength="25" placeholder="" required
+                                          th:field="${device.datePurchase}"
                                           type="date"/> </span>
                                                 <div class="zf-clearBoth"></div>
                                                 <p class="zf-errorMessage" id="Date_error" style="display:none;">Invalid
@@ -247,7 +249,8 @@
                                             <em class="zf-important">*</em>
                                         </label>
                                             <div class="zf-tempContDiv">
-                            <span> <input id="dateExpiry" maxlength="25" placeholder="" required th:field="${device.dateExpiry}"
+                            <span> <input id="dateExpiry" maxlength="25" placeholder="" required
+                                          th:field="${device.dateExpiry}"
                                           type="date"/> </span>
                                                 <div class="zf-clearBoth"></div>
                                                 <p class="zf-errorMessage" style="display:none;">Invalid value</p>
@@ -259,9 +262,8 @@
                                                 class="zf-important">*</em></label>
 
                                             <div class="zf-tempContDiv">
-                                                <input accept="*/*" id="imageFile" name="imageFile" type="file"/>
-                                                <p class="zf-errorMessage" id="FileUpload_error" style="display:none;">
-                                                    Chọn các tệp ảnh cho ô này.</p>
+                                                <input accept="*/*" id="imageFile" name="imageFile"
+                                                       th:field="${device.image}"/>
                                             </div>
                                             <div class="zf-clearBoth"></div>
                                         </li>
@@ -270,9 +272,9 @@
                                                 class="zf-important">*</em></label>
                                             <div class="zf-tempContDiv">
                                                 <input accept="*/*" id="imageBillFile" name="imageBillFile"
-                                                       type="file"/>
-                                                <p class="zf-errorMessage" style="display:none;">Chọn các tệp ảnh cho ô
-                                                    này.</p>
+
+                                                       th:field="${device.imageBill}"/>
+
                                             </div>
                                             <div class="zf-clearBoth"></div>
                                         </li>
