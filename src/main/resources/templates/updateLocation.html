@@ -179,7 +179,7 @@
                 <!-- main wrapper start -->
                 <div class="col-lg-9 order-1 order-lg-2" style="width: 1100px">
                     <div class="zf-templateWidth">
-                        <form th:action="@{add}" th:each="loc:${location}" name='form' method="POST"
+                        <form th:action="@{/location/updated}" th:each="loc:${location}" name='form' method="POST"
                               onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' accept-charset='UTF-8'
                               enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name" value="">
                             <!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->

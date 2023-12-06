@@ -233,19 +233,16 @@
                                         <!---------File Upload Starts Here---------->
                                         <li class="zf-tempFrmWrapper"><label class="zf-labelName">Ảnh thiết bị</label>
                                             <div class="zf-tempContDiv">
-                                                <input type="file" name="imageFile" id="imageFile" accept="image/*"/>
-                                                <input type="hidden" th:field="${device.image}"/>
-                                                <!--                                <img class="img-32" th:src="*{device.image}">-->
-                                                <p id="FileUpload_error" class="zf-errorMessage" style="display:none;"></p>
+                                                <input accept="*/*" id="imageFile" name="imageFile"
+                                                       th:field="${device.image}"/>
                                             </div>
                                             <div class="zf-clearBoth"></div>
                                         </li>
                                         <!---------File Upload Ends Here---------->
                                         <li class="zf-tempFrmWrapper"><label class="zf-labelName">Ảnh hóa đơn</label>
                                             <div class="zf-tempContDiv">
-                                                <input type="file" name="imageBillFile" id="imageBillFile" accept="image/*"/>
-                                                <input type="hidden" th:field="${device.imageBill}"/>
-                                                <p class="zf-errorMessage" style="display:none;"></p>
+                                                <input accept="*/*" id="imageBillFile" name="imageBillFile"
+                                                       th:field="${device.imageBill}"/>
                                             </div>
                                             <div class="zf-clearBoth"></div>
                                         </li>
