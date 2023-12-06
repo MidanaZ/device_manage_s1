@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-<h3 align="center">Trang web Quản lý thiết bị </h3>
+<h3 align="center">Trang web Device Management </h3>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Mục lục</summary>
