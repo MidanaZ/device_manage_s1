@@ -86,24 +86,7 @@ public class DeviceManageController {
     }
 
     @PostMapping(value = "update")
-    public String updated(Device device, @RequestParam("imageFile") MultipartFile imageFile, @RequestParam("imageBillFile") MultipartFile imageBillFile) {
-        if (!imageFile.isEmpty()) {
-            try {
-                String imageFileName = service.saveImage(imageFile);
-                device.setImage(imageFileName);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        if (!imageBillFile.isEmpty()) {
-            try {
-                String imageFileName = service.saveImageBill(imageBillFile);
-                device.setImageBill(imageFileName);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
+    public String updated(Device device) {
         service.updateDevice(device);
         return "redirect:/device/list";
     }
